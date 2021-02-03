@@ -37,7 +37,7 @@ end
 s.subspec 'Twilio' do |tw|
   tw.xcconfig    =
         { 'OTHER_CFLAGS' => '$(inherited) -DKITE_OFFER_PAYPAL' }
-  tw.dependency 'MainSDK/MainSDK'
+#  tw.dependency 'MainSDK/MainSDK'
   tw.source_files = 'TwilioSDK/*.{h,m,swift}'
 end
 
