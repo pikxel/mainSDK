@@ -10,6 +10,8 @@
 		D0367AF125C9F5F000523FC0 /* MainSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D0367AEF25C9F5F000523FC0 /* MainSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0367AF925C9F60800523FC0 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0367AF825C9F60800523FC0 /* Core.swift */; };
 		D0367AFC25C9FED500523FC0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D0367AFB25C9FED500523FC0 /* LICENSE */; };
+		D0E5938825CA975400863AB6 /* TwilioSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E5938625CA975400863AB6 /* TwilioSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E5938F25CA976D00863AB6 /* Twilio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5938E25CA976D00863AB6 /* Twilio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,10 +20,21 @@
 		D0367AF025C9F5F000523FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0367AF825C9F60800523FC0 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		D0367AFB25C9FED500523FC0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D0E5938425CA975400863AB6 /* TwilioSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwilioSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E5938625CA975400863AB6 /* TwilioSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwilioSDK.h; sourceTree = "<group>"; };
+		D0E5938725CA975400863AB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E5938E25CA976D00863AB6 /* Twilio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twilio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D0367AE925C9F5F000523FC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E5938125CA975400863AB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +49,7 @@
 			children = (
 				D0367AFB25C9FED500523FC0 /* LICENSE */,
 				D0367AEE25C9F5F000523FC0 /* MainSDK */,
+				D0E5938525CA975400863AB6 /* TwilioSDK */,
 				D0367AED25C9F5F000523FC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				D0367AEC25C9F5F000523FC0 /* MainSDK.framework */,
+				D0E5938425CA975400863AB6 /* TwilioSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +73,16 @@
 			path = MainSDK;
 			sourceTree = "<group>";
 		};
+		D0E5938525CA975400863AB6 /* TwilioSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5938625CA975400863AB6 /* TwilioSDK.h */,
+				D0E5938725CA975400863AB6 /* Info.plist */,
+				D0E5938E25CA976D00863AB6 /* Twilio.swift */,
+			);
+			path = TwilioSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -66,6 +91,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0367AF125C9F5F000523FC0 /* MainSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E5937F25CA975400863AB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E5938825CA975400863AB6 /* TwilioSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +123,24 @@
 			productReference = D0367AEC25C9F5F000523FC0 /* MainSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D0E5938325CA975400863AB6 /* TwilioSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E5938B25CA975500863AB6 /* Build configuration list for PBXNativeTarget "TwilioSDK" */;
+			buildPhases = (
+				D0E5937F25CA975400863AB6 /* Headers */,
+				D0E5938025CA975400863AB6 /* Sources */,
+				D0E5938125CA975400863AB6 /* Frameworks */,
+				D0E5938225CA975400863AB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwilioSDK;
+			productName = TwilioSDK;
+			productReference = D0E5938425CA975400863AB6 /* TwilioSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +150,10 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					D0367AEB25C9F5F000523FC0 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					D0E5938325CA975400863AB6 = {
 						CreatedOnToolsVersion = 12.2;
 						LastSwiftMigration = 1220;
 					};
@@ -118,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				D0367AEB25C9F5F000523FC0 /* MainSDK */,
+				D0E5938325CA975400863AB6 /* TwilioSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +187,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0E5938225CA975400863AB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,6 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0367AF925C9F60800523FC0 /* Core.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E5938025CA975400863AB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E5938F25CA976D00863AB6 /* Twilio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +389,57 @@
 			};
 			name = Release;
 		};
+		D0E5938925CA975500863AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 62JD93G7RB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TwilioSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = peter.lizak.TwilioSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0E5938A25CA975500863AB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 62JD93G7RB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TwilioSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = peter.lizak.TwilioSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,6 +457,15 @@
 			buildConfigurations = (
 				D0367AF525C9F5F000523FC0 /* Debug */,
 				D0367AF625C9F5F000523FC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E5938B25CA975500863AB6 /* Build configuration list for PBXNativeTarget "TwilioSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E5938925CA975500863AB6 /* Debug */,
+				D0E5938A25CA975500863AB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

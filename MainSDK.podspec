@@ -26,6 +26,12 @@ s.source = { :git => "https://github.com/pikxel/mainSDK.git",
 # 7
 s.framework = "UIKit"
 
+s.subspec 'Twilio' do |sp|
+  sp.xcconfig    =
+    { 'OTHER_CFLAGS' => '$(inherited) -DKITE_OFFER_PAYPAL' }
+  sp.source_files = 'TwilioSDK/*'
+end
+
 # 8
 s.source_files = "MainSDK/**/*.{swift}"
 
