@@ -35,6 +35,8 @@ s.subspec 'MainSDK' do |sp|
 end
 
 s.subspec 'Twilio' do |sp|
+  sp.xcconfig    =
+        { 'OTHER_CFLAGS' => '$(inherited) -DKITE_OFFER_PAYPAL' }
   sp.dependency 'MainSDK/MainSDK'
   sp.source_files = 'TwilioSDK/*.{h,m,swift}'
 end
