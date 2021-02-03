@@ -7,7 +7,11 @@
 
 import Foundation
 
-public class Twilio {
+public protocol SelfAware {
+
+}
+
+public class Twilio: SelfAware {
     public init() {
         print("Twilio is created")
     }
