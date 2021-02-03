@@ -22,7 +22,7 @@ s.homepage = "https://github.com/pikxel/mainSDK.git"
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
 s.source = { :git => "https://github.com/pikxel/mainSDK.git",
              :tag => "#{s.version}",
-             :commit => "71f2e2f8d523974632d28bdddef72847c02c060c"
+             :commit => "c5ff9e9f99d448ccdc30b7ed8141ab95498a89cc"
 }
 
 # 7
