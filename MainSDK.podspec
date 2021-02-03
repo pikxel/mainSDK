@@ -22,7 +22,7 @@ s.homepage = "https://github.com/pikxel/mainSDK.git"
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
 s.source = { :git => "https://github.com/pikxel/mainSDK.git",
              :tag => "#{s.version}",
-             :commit => "3b236e5dfad01bfe1e3d12eb96d6bda7e580739c"
+             :commit => "d0e56aade35b1c1086cecfe671443b57a7ebfeeb"
 }
 
 # 7
@@ -35,10 +35,7 @@ s.subspec 'MainSDK' do |sp|
 end
 
 s.subspec 'Twilio' do |tw|
-  tw.xcconfig    =
-  'OTHER_SWIFT_FLAGS[config=Debug]' => '-DDEBUG',
-        { 'OTHER_CFLAGS' => '$(inherited) -DKITE_OFFER_PAYPAL' }
-#  tw.dependency 'MainSDK/MainSDK'
+  tw.dependency 'MainSDK/MainSDK'
   tw.source_files = 'TwilioSDK/*.{h,m,swift}'
 end
 

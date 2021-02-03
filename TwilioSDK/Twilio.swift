@@ -6,12 +6,13 @@
 //
 
 import Foundation
-
-public protocol SelfAware {
-
-}
-
+#if canImport(MainSDK)
+import MainSDK
 public class Twilio: SelfAware {
+    public func awake() {
+        print("Twilio calling awake")
+    }
+
     public init() {
         print("Twilio is created")
     }
@@ -20,3 +21,14 @@ public class Twilio: SelfAware {
         print("Twilio test called")
     }
 }
+#else
+public class Twilio {
+    public init() {
+        print("Twilio is created")
+    }
+
+    public func test() {
+        print("Twilio test called")
+    }
+}
+#endif

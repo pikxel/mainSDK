@@ -7,6 +7,11 @@
 
 import Foundation
 
+
+public protocol SelfAware {
+    func awake()
+}
+
 #if DKITE_OFFER_PAYPAL
 import TwilioSDK
 public class Core {
@@ -44,6 +49,20 @@ public class Core {
 
     public func test() {
         print("Core MainSDK test called")
+    }
+    
+    static func awakeAll() {
+        let typeCount = Int(objc_getClassList(nil, 0))
+        let types = UnsafeMutablePointer<AnyClass>.allocate(capacity: typeCount)
+        let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
+        objc_getClassList(autoreleasingTypes, Int32(typeCount))
+        for index in 0 ..< typeCount {
+            if let type = types[index] as? SelfAware {
+                print("Success")
+            }
+        }
+//        for index in 0 ..< typeCount { (types[index] as? SelfAware.Type)?.awake() }
+        types.deallocate()
     }
 }
 #endif
