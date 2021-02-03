@@ -29,7 +29,6 @@ s.framework = "UIKit"
 s.subspec 'Twilio' do |sp|
   sp.xcconfig    =
     { 'OTHER_CFLAGS' => '$(inherited) -DKITE_OFFER_PAYPAL' }
-  sp.source_files = 'TwilioSDK/*'
 end
 
 # 8
