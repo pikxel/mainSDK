@@ -14,6 +14,16 @@
 		D0E5938F25CA976D00863AB6 /* Twilio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5938E25CA976D00863AB6 /* Twilio.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D0E5939D25CAA7B100863AB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0367AE325C9F5F000523FC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E5938325CA975400863AB6;
+			remoteInfo = TwilioSDK;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D0367AEC25C9F5F000523FC0 /* MainSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MainSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0367AEF25C9F5F000523FC0 /* MainSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSDK.h; sourceTree = "<group>"; };
@@ -51,6 +61,7 @@
 				D0367AEE25C9F5F000523FC0 /* MainSDK */,
 				D0E5938525CA975400863AB6 /* TwilioSDK */,
 				D0367AED25C9F5F000523FC0 /* Products */,
+				D0E5939A25CAA7B000863AB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +92,13 @@
 				D0E5938E25CA976D00863AB6 /* Twilio.swift */,
 			);
 			path = TwilioSDK;
+			sourceTree = "<group>";
+		};
+		D0E5939A25CAA7B000863AB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +135,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D0E5939E25CAA7B100863AB6 /* PBXTargetDependency */,
 			);
 			name = MainSDK;
 			productName = MainSDK;
@@ -214,6 +233,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0E5939E25CAA7B100863AB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E5938325CA975400863AB6 /* TwilioSDK */;
+			targetProxy = D0E5939D25CAA7B100863AB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D0367AF225C9F5F000523FC0 /* Debug */ = {

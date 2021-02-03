@@ -6,7 +6,20 @@
 //
 
 import Foundation
+#if canImport(TwilioSDK)
+import TwilioSDK
+public class Core {
+    public init() {
+        print("Core MainSDK init called")
+    }
 
+    public func test() {
+        let twilio = Twilio()
+        twilio.test()
+        print("Core MainSDK test called")
+    }
+}
+#else
 public class Core {
     public init() {
         print("Core MainSDK init called")
@@ -16,3 +29,4 @@ public class Core {
         print("Core MainSDK test called")
     }
 }
+#endif
