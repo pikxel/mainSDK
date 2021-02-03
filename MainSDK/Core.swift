@@ -6,7 +6,8 @@
 //
 
 import Foundation
-#if canImport(TwilioSDK)
+
+#if DKITE_OFFER_PAYPAL
 import TwilioSDK
 public class Core {
     public init() {
@@ -30,3 +31,30 @@ public class Core {
     }
 }
 #endif
+
+
+//
+//#if canImport(TwilioSDK)
+//import TwilioSDK
+//public class Core {
+//    public init() {
+//        print("Core MainSDK init called")
+//    }
+//
+//    public func test() {
+//        let twilio = Twilio()
+//        twilio.test()
+//        print("Core MainSDK test called")
+//    }
+//}
+//#else
+//public class Core {
+//    public init() {
+//        print("Core MainSDK init called")
+//    }
+//
+//    public func test() {
+//        print("Core MainSDK test called")
+//    }
+//}
+//#endif
