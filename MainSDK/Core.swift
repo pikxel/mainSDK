@@ -26,7 +26,7 @@ public class Core {
         print("Core MainSDK test called")
     }
 
-    static func awakeAll() {
+    public func awakeAll() {
         let typeCount = Int(objc_getClassList(nil, 0))
         let types = UnsafeMutablePointer<AnyClass>.allocate(capacity: typeCount)
         let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
