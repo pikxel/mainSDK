@@ -8,7 +8,7 @@
 import Foundation
 import MainSDK
 public class Twilio: SelfAware {
-    public func awake() {
+    public static func awake() {
         print("Twilio calling awake")
     }
 

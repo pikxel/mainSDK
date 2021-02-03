@@ -9,21 +9,13 @@ import Foundation
 
 
 public protocol SelfAware {
-    func awake()
+    static func awake()
 }
-
-#if DKITE_OFFER_PAYPAL
-import TwilioSDK
+//
+//#if DKITE_OFFER_PAYPAL
 public class Core {
     public init() {
         print("Core MainSDK init called")
-    }
-
-    public func test() {
-        awakeAll(())
-        let twilio = Twilio()
-        twilio.test()
-        print("Core MainSDK test called")
     }
 
     public func awakeAll() {
@@ -41,31 +33,31 @@ public class Core {
     }
 
 }
-#else
-public class Core {
-    public init() {
-        print("Core MainSDK init called")
-    }
-
-    public func test() {
-        print("Core MainSDK test called")
-    }
-    
-    static func awakeAll() {
-        let typeCount = Int(objc_getClassList(nil, 0))
-        let types = UnsafeMutablePointer<AnyClass>.allocate(capacity: typeCount)
-        let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
-        objc_getClassList(autoreleasingTypes, Int32(typeCount))
-        for index in 0 ..< typeCount {
-            if let type = types[index] as? SelfAware {
-                print("Success")
-            }
-        }
-//        for index in 0 ..< typeCount { (types[index] as? SelfAware.Type)?.awake() }
-        types.deallocate()
-    }
-}
-#endif
+//#else
+//public class Core {
+//    public init() {
+//        print("Core MainSDK init called")
+//    }
+//
+//    public func test() {
+//        print("Core MainSDK test called")
+//    }
+//
+//    static func awakeAll() {
+//        let typeCount = Int(objc_getClassList(nil, 0))
+//        let types = UnsafeMutablePointer<AnyClass>.allocate(capacity: typeCount)
+//        let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
+//        objc_getClassList(autoreleasingTypes, Int32(typeCount))
+//        for index in 0 ..< typeCount {
+//            if let type = types[index] as? SelfAware {
+//                print("Success")
+//            }
+//        }
+////        for index in 0 ..< typeCount { (types[index] as? SelfAware.Type)?.awake() }
+//        types.deallocate()
+//    }
+//}
+//#endif
 
 
 //
